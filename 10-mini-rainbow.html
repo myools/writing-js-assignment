@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to write functions accepting multiple arguments and then concatenating the return values of the function.
+
+    You should write a function that generates the following HTML string.
+
+    <code>
+    &lt;div class=&quot;color {color-name}&quot style=&quot;color: ${hex};&quot;&gt;
+    &nbsp;&nbsp;&lt;span class=&quot;name&quot;&gt;{color-name}&lt;/span&gt;
+    &nbsp;&nbsp;&lt;span class=&quot;hex&quot;&gt;{hex}&lt;/span&gt;
+    &nbsp;&nbsp;&lt;span class=&quot;rgb&quot;&gt;{rbg}&lt;/span&gt;
+    &lt;/div&gt;
+    </code>
+
+    Use this function to display 6 color divs inside the following `main` element. The colors are:
+
+    - Red
+    - Orange
+    - Yellow
+    - Green
+    - Blue
+    - Purple
+
+    To use the function, it should accept three arguments. The string of the color name, the hex code and the rgb value.
+
+    For example, using the function to generate the Yellow color div would be:
+
+    <code>
+    nameOfFunction('Yellow', '#FFFF00', '255,255,0')
+    </code>
+
+    Use Google to find the appropriate hex and rgb for each color.
+
+    You do not need to write styles to color the elements unless you want to.
+  </pre>
+
+  <main class="main">
+  </main>
+
+  <script>
+    function divMaker(colorName, hex, rbg) {
+      return `
+      <div class="color ${colorName}" style="color: ${hex};">
+        <span class="name">${colorName}</span>
+        <span class="hex">${hex}</span>
+        <span class="rbg">${rbg}</span>
+      </div>`;
+
+    }
+    document.querySelector('.main').innerHTML = divMaker('Red', '#FF0000','255,0,0') +
+    divMaker('Orange', '#FF4500', '255,69,0') +
+    divMaker('Yellow', '#FFFF00', '255,255,0') +
+    divMaker('Green', '	#008000', '0,128,0') +
+    divMaker('Blue', '#0000FF', '0,0,255') +
+    divMaker('Purple', '#800080', '128,0,128');
+    
+  </script>
+</body>
+
+</html>

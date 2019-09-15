@@ -1,0 +1,10 @@
+pre {
+  white-space: pre-line;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+code {
+  background-color: #444;
+  color: #eee;
+}

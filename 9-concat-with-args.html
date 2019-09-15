@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to concatenate strings within a function (this is an equivalent to using a template string).
+
+    The list will be populated with 3 <code>li</code> elements.
+
+    - The first <code>li</code> should have the content "Item one!".
+    - The second <code>li</code> should have the content "Item two!".
+    - The third <code>li</code> should have the content "Item three!".
+
+    You can use one function, <code>getListItem</code> to achieve this result by calling it 3 times. Each time you call this function, pass the appropriate argument for the desired result.
+  </pre>
+
+  <div class="content">
+    <h1>Page with a list</h1>
+    <main class="main">
+      <ul class="list"></ul>
+    </main>
+  </div>
+
+<script>
+  function getListItem(number) {
+    return '<li>Item ' + `${number}` + '!</li>';
+  }
+
+  document.querySelector('.list').innerHTML =
+    getListItem('one')
+     + getListItem('two')
+     + getListItem('three');
+</script>
+</body>
+
+</html>

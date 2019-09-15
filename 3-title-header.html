@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to select DOM nodes by their class attribute.
+
+    1. Display the return value from <code>getH1Content</code> inside the h1 with a class of "header".
+    2. Display the return value from <code>getMainContent</code> inside the main element with a class of "main".
+
+    Use the document query selector to select the elements by class name. Use the <code>innerHTML</code> property to update the elements content.
+  </pre>
+
+  <h1 class="header"></h1>
+  <main class="main"></main>
+
+<script>
+  function getH1Content() {
+    return 'The page title!';
+  }
+
+  function getMainContent() {
+    return 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nemo illo quae laborum earum. Maxime molestias eum sequi perferendis nam, ad quae natus ea recusandae dolore, quidem hic quasi sit.';
+  }
+
+  document.querySelector('.header').innerHTML = getH1Content();
+  document.querySelector('.main').innerHTML = `<p>${getMainContent()}</p>`;
+</script>
+</body>
+</html>

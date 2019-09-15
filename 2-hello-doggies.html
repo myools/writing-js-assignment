@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to select DOM nodes by their id attribute, and to set their content. The drill also tests your ability to reuse functions.
+
+    Use the <code>getHelloDoggy</code> function to display the same string inside both:
+    - the <code>div</code> with an id of "content-1"
+    - and the <code>div</code> with an id of "content-2".
+
+    <code>Hello, doggy!</code> should be displayed twice.
+  </pre>
+
+  <div id="content-1"></div>
+  <div id="content-2"></div>
+
+<script>
+  function getHelloDoggy() {
+    return 'Hello, doggy!';
+  }
+
+  document.querySelector('#content-1').innerHTML = `<p>${getHelloDoggy()}</p>`;
+  document.querySelector('#content-2').innerHTML = `<p>${getHelloDoggy()}</p>`;
+
+</script>
+</body>
+</html>

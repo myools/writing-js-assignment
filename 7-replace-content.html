@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to replace the content of DOM nodes and use variables as arguments to a function.
+
+    Write a function named <code>getDrWho</code> which takes one parameter called <code>who</code>. The function should return a template string that states <code>[someone] is Dr. Who!</code>.
+
+    For example, if the function was to be called like so:
+
+    <code>getDrWho('William Hartnell')</code>
+
+    The return value would be a string of <code>William Hartnell is Dr. Who!</code>
+
+    Use the return value of this function when called with the variable <code>drWho</code> to replace the content of the <code>p</code> element with a class attribute of "who".
+  </pre>
+
+  <div class="content">
+    <h1>Who's Dr. Who?</h1>
+    <main class="main">
+      <p class="who">
+        Peter Capaldi is Dr. Who!
+      </p>
+    </main>
+  </div>
+
+<script>
+  const drWho = 'Jodie Whittaker';
+
+  function getDrWho(who) {
+    return `${who} is Dr. Who!`;
+  }
+
+  document.querySelector('.who').innerHTML = getDrWho(drWho);
+</script>
+</body>
+</html>

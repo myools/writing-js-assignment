@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This function tests your ability to concatenate strings returned from a function using the <code>+</code> operator.
+
+    Set the content of the <code>ul</code> element with a class attribute of "list". The content should be the result of concatenating the result of <code>getListItem</code> 3 times in a row.
+
+    The final output should be 3 <code>li</code> items within the <code>ul</code> element.
+  </pre>
+
+  <div class="content">
+    <h1>Page with a list</h1>
+    <main class="main">
+      <ul class="list"></ul>
+    </main>
+  </div>
+
+<script>
+  function getListItem() {
+    return '<li>List item!</li>';
+  }
+
+  document.querySelector('.list').innerHTML = getListItem() + getListItem() + getListItem();
+</script>
+</body>
+</html>
